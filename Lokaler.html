@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Lokaler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #dedfe4;
+            display: flex;
+            flex-direction: column; /* Stack children vertically */
+            align-items: center; /* Center children horizontally */
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #ffffff;
+            height: 100px; /* Adjust this height as needed */
+            width: 100%; /* This will make sure it takes the full width */
+        }
+        .button {
+            background-color: #f6bf45;
+            border: none;
+            color: black;
+            padding: 25px 40px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #c99d3a;
+        }
+        .main {
+            width: 100%; /* Adjust width as needed */
+            height: 100%; /* Adjust height as needed*/
+            padding: 20px; /* Add some padding if needed */
+            /* Other styles as needed */
+            /*background-color: green;*/
+        }
+        .dateInputButton{
+            margin: 5px;
+        }
+        .saveDateButton{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="button">Alla lokaler</button>
+        <button class="button">Bokade lokaler</button>
+        <button class="button">Lediga lokaler</button>
+    </div>
+    <div class="main">
+        <input class="dateInputButton" type="date" id="dateInput">
+        <button class="saveDateButton" onclick="saveDate()">Save Date</button>
+
+        <ul id="missingResources"></ul>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
